@@ -12,4 +12,8 @@ Transcription notes (how the LaTeX original maps onto the schema):
 - Dates are `YYYY-MM` (the app's `<input type="month">` format); generators prettify them for display.
 - Round-trip: **Import cv.json / Export JSON** in CV Builder Pro reads and writes this exact file (the `$schema` key is ignored by the app and stripped from the published copy).
 
+This file is also where **credentials of record** live: degrees, honors, and GPA sit on `education[]` entries, and licenses/certifications belong in `certifications[]` (currently empty on purpose — the old LaTeX list was deliberately disabled; add one back only when it is current and verifiable).
+
+The [bamr87 hub](https://github.com/bamr87/bamr87) can propose fleet content for this file: its `dash-gen cv` projects the project registry into `_data/cv_portfolio.json` (these same Project/Skill shapes), and its `sync-cv` skill turns that into a reviewed merge PR here. Proposals only — nothing overwrites this file mechanically.
+
 Edit it directly or through the app — either way, run `npm run build` and commit `CV.md` alongside your change. Facts only: never invent content that isn't true of the real CV.

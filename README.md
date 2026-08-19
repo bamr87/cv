@@ -39,6 +39,7 @@ There are **two LaTeX lanes** by design. The *artisanal lane* (`cv.tex`, `resume
 | **Snapshot** | tag `vYYYY.MM.DD` or manual dispatch | GitHub release with recruiter-named PDF/MD/TXT/TeX/JSON assets — cut one every time the CV goes out the door |
 | **LaTeX preview** | PR touching `*.tex`/`*.sty`/images | compiles the artisanal lane, uploads the PDF as a run artifact |
 | **Tailoring** | [issue template](.github/ISSUE_TEMPLATE/tailor-cv.md) | paste a JD, `@claude` drafts a tailored variant into `jd/` as a PR |
+| **Fleet sync** | hub-driven (`dash-gen cv` + `sync-cv` skill) | the [bamr87 hub](https://github.com/bamr87/bamr87) projects its project registry into `_data/cv_portfolio.json` (this repo's CVData shapes) and proposes curated merges into `data/cv.json` — projects/skills flow in from the fleet, never as an automatic overwrite |
 
 ## Editing the CV
 
